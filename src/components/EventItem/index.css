@@ -1,1 +1,21 @@
 /* Write your CSS here */
+.img-1 {
+  height: 100px;
+  width: 200px;
+}
+.head-11 {
+  color: #f8fafc;
+  font-family: 'Roboto';
+  font-size: 20px;
+  font-weight: 600;
+}
+.para-1 {
+  color: #475569;
+  font-family: 'Roboto';
+  font-size: 18px;
+  font-weight: 600;
+  padding-bottom: 20px;
+}
+.li-1{
+  margin-left: 26px;
+}

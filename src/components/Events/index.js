@@ -1,3 +1,8 @@
+import {Component} from 'react'
+import EventItem from '../EventItem'
+import ActiveEventRegistrationDetails from '../ActiveEventRegistrationDetails'
+import './index.css'
+
 const eventsList = [
   {
     id: 'f9bb2373-b80e-46b8-8219-f07217b9f3ce',
@@ -48,3 +53,35 @@ const eventsList = [
   },
 ]
 // Write your code here
+class Events extends Component {
+  state = {status: ''}
+
+  isWhat = id => {
+    const filterList = eventsList.filter(each => each.id === id)
+    console.log(filterList)
+    const stat = filterList[0].registrationStatus
+    console.log(stat)
+    this.setState({status: stat})
+  }
+
+  render() {
+    const {status} = this.state
+    console.log(status)
+    return (
+      <div className="main-con">
+        <div className="sec-con">
+          <h1 className="head-1">Events</h1>
+          <ul className="ul">
+            {eventsList.map(each => (
+              <EventItem lists={each} isWhat={this.isWhat} key={each.id} />
+            ))}
+          </ul>
+        </div>
+        <div>
+          <ActiveEventRegistrationDetails data={status} />
+        </div>
+      </div>
+    )
+  }
+}
+export default Events

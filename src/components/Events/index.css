@@ -1,1 +1,28 @@
 /* Write your CSS here */
+.main-con {
+  display: flex;
+}
+.sec-con {
+  width: 60vw;
+  background-color: #323f4b;
+  padding-left: 30px;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.head-1 {
+  color: #ffffff;
+  font-family: 'Roboto';
+  font-size: 30px;
+}
+.ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+@media (min-width: 578px) {
+  .sec-con {
+    height: 100vh;
+  }
+}
